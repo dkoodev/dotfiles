@@ -15,6 +15,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Rename'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mxw/vim-jsx'
+Plugin 'raimondi/delimitmate'
 
 
 " The following are examples of different formats supported.
@@ -137,7 +138,7 @@ map <leader>q gqip
 "nnoremap tt  :tabedit<Space>
 "nnoremap tn  :tabnext<Space>
 "nnoremap tm  :tabm<Space>
-nnoremap <space>d :tabclose<CR>
+  nnoremap <space>d :tabclose<CR>
 " Alternatively use
 nnoremap <space>l :tabnext<CR>
 nnoremap <space>h :tabprev<CR>
@@ -145,8 +146,13 @@ nnoremap <space>n :tabnew<CR>
 
 nnoremap <C-g> :NERDTree<CR>
 
+nnoremap <tab> <c-w>
+nnoremap <tab><tab> <c-w><c-w>
 
-" Visualize tabs and newlines
+nnoremap zz :update<cr>
+nnoremap <Leader>r :source $MYVIMRC<CR>
+
+" : Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
 " Uncomment this to enable by default:
 " set list " To enable by default
